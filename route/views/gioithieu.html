@@ -1,0 +1,24 @@
+<div>
+  <h1>{{title}}</h1>
+</div>
+<table class="table table-bordered table-danger">
+  <tr>
+    <td>tên</td>
+    <td>năm sinh</td>
+    <td>chuyên ngành</td>
+  </tr>
+  <tr ng-repeat="item in student">
+    <td>{{item.ten}}</td>
+    <td>{{item.namSinh}}</td>
+    <td ng-bind="item.chuyenNganh"></td>
+  </tr>
+</table>
+<form ng-submit="createStudent()">
+  <label for="" class="form-lable"> ten</label>
+  <input type="text" class="form-control" ng-model="student.name" />
+  <label for="" class="form-lable"> nam sinh</label>
+  <input type="text" class="form-control" ng-model="student.year" />
+  <label for="" class="form-lable"> chuyên ngành</label>
+  <input type="text" class="form-control" ng-model="student.couse" />
+  <button type="text" class="btn btn-success">Login</button>
+</form>
